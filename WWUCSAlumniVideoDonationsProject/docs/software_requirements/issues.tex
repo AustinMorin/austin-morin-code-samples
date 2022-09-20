@@ -1,0 +1,22 @@
+\section{Issue List}
+% Any outstanding requirement issues.  This is not your bug list, but rather a
+% list of problems with the analytically step.  Consider the following example:
+% Item 3.1, identification of uninitialized variables, is undecidable.  That is,
+% it implies a solution to the halting problem.  A satisfying approximation is
+% currently undefined.
+%
+\begin{enumerate}
+    \item When splitting our recorded videos into snippets, it relies on audio 
+    detection to make sure a student or staff member is saying the anticipated 
+    word. It is known that AI has a diversity problem and is not tested on many 
+    non-English accents. Therefore, we are anticipating having many videos sent 
+    to pending to be viewed manually due to the program being unable to detect a 
+    word based on an accent.
+    \item There is going to have to be someone to look through the pending videos 
+    and name them manually. We anticipate our client as the department chair will 
+    not want to do this himself. Finding someone with the time and patience to go 
+    through them will be something we will have to address.
+    \item The possibility of race conditions will need to be handled appropriately
+    to avoid the loss of audio and/or video data. This could occur if two near identical
+    audio, video files, or input CSV files are attempted to be processed at the EXACT same time.
+\end{enumerate}

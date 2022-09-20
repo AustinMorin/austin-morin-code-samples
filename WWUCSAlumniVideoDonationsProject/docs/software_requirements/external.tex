@@ -1,0 +1,62 @@
+\section{External Interface Requirements}
+% List all external systems to which this project will interface.  For example,
+% consider a traffic signal control system.  The red-yellow-green and cross-walk
+% buttons are a required interface.  The system communicates over an RS-434
+% hardware serial link.  
+
+\subsection{User Interfaces}
+1) Users will be required to operate a video playback system of their choice that supports .mp4 files, and know how
+to access their URL video link using an email inbox of their choice (Outlook, Windows Mail, etc.)\\
+2) QR codes in the video will be Version 3 QR Codes.\\
+3) Linux command line on a Computer Science Lab Computer is responsible for the executing the video stitching program.\\
+4) Cue cards will be drawn to adhere to accommodate visually-impaired users.\\
+5) Videos will be recorded in 720p resolution at the most, and should be scalable to fit the entirety of the user's screen.\\
+6) Release waivers will have specific instructions for signing before recordings occur.\\
+7) Videos will contain minimal non-verbal messages to accommodate visually-impaired users.\\
+8) Program input CSV file contains first name, last name, and graduation year of each alumnus.\\
+9) Program output CSV file contains first name, last name, graduation year, and the hashed URL to their personalized video.\\
+
+\subsection{Hardware Interfaces}
+
+1) Users will be able to access the URL video links regardless of what PC they are on (assuming that they are using a modern one that
+can support video playback).\\
+2) The stitching program will be run on a Computer Science Department computer that supports execution of Linux commands.\\
+3) Videos will be recorded using a Zoomvid-6 WWU/ATUS rental camera.\\
+4) The development team will need a USB cable to upload videos from the Zoomvid-6 camera.\\
+\
+\subsection{Software Interfaces}
+
+1) Users will be able to access the URL video links regardless of the operating system that they are on (assuming that they are using
+a modern one that can support video playback).\\
+2) The stitching program will be run on an operating system that supports the Linux command line.\\
+3) The development team will edit code using any IDE that supports Python 3.0 or later.\\
+4) Git will be used to adding, pushing, editing, deleting, and merging files.\\
+5) Gitlab will be used to store the development documents, source code, and video tests. \\
+6) Alumni messages and video URLs are accessible via Microsoft Outlook, Apple Mail, Gmail, Microsoft Mail, and any modern inbox software.\\
+7) Microsoft Excel will be used to store the information from the CSV files.\\
+8) The Python library moviepy version 1.0.3 is used for video editing.\\
+9) The Python library pydub version 0.25.1 is used for audio editing.\\
+10) All user info will be stored remotely both on the CS Dept. Linux Computer and on any cloud storage platform of the development team's choice on their
+personal devices.\\
+11) The version of Python that the stitching program is written in is 3.9.\\
+
+\subsection{Communications Interfaces}
+
+1) Users will be able to access their personalized video on any connection type via WiFi, USB, Ethernet, etc.\\
+2) Users will be able to access their personalized video only under their WWU Computer Science alias (i.e. you must be a graduate or
+faculty member of the Computer Science Department to receive the video.\\
+3) In order to access Gitlab or Computer Science Lab machines remotely, the development team must use download and use 
+WWU's Cisco AnyConnect Secure Mobility Client VPN.\\
+4) Release waivers that alumni and faculty must sign before being recorded.\\
+5) Users will have access to the URL video link in a message sent via email.\\
+6) Dr. Filip Jagodzinski will have access to all alumni email information and CSV files that he will use to communicate with
+the faculty responsible for sending out the messages. Means of communication include email and remote transfer of the CSV files 
+between Jagodzinski and the responsible faculty.\\
+7) The final version of the program will be executed on one Linux machine, so there will be no need for other computers to communicate
+with each other while running the program concurrently.\\
+8) All video URLs are hashed to ensure security.\\
+9) The cost of data transfer will be kept to a minimum, working with non-HD videos to decrease storage space needed to transfer video
+files from one location to another.\\
+10) The amount of text in the alumni's emails will comprise of a short greeting, a URL to the final stitched video, and a link to the
+Computer Science Department's official donation page.\\
+\end{enumerate}

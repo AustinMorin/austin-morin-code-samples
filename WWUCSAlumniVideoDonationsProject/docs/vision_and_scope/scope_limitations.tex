@@ -1,0 +1,53 @@
+\section{Scope and Limitations}
+% This section identifies what part of the envisioned solution is going to be
+% developed in this current project or version, what will be delayed until
+% latter projects, and what is out of scope for the whole product.  
+%
+\subsection{Scope of Initial Release}
+We are going to develop two distinct programs, 
+a video editing program, and a video stitching program.\\ 
+The video editing program will accept videos as a (format) 
+and parse it for human speech. The program will extract 
+snippets where the person is speaking and name each clip 
+the word they are saying. For longer clips made up of 
+multiple sentences (used for promoting clubs or programs), 
+they should already be edited by the submitter and have no 
+need to go through the video editing program.\\
+For the video stitching program, it will have an assortment of
+sentences curated by our team and client that it will randomly
+select and build with the clips we've collected. An example
+sentence being:\\ 
+\{greeting, alumni name, the, computer, science, department, 
+would, like, to, ask, you, for, a, donation, to, program message,
+thank, you, for, and, take, care\} \\
+The program will accept a CSV file where each line contains an
+alumni's first name, last name, and year of graduation. 
+The program will return a copy of the CSV file with the addition
+on each line of a URL to the alumni's personal video. The program
+will iterate through the alumni and pick a random sentence
+structure for each one, it will then look for clips to make up
+the sentence with priority to those taken from the same year 
+as the alumnus graduated. It will then stitch all the clips
+together, encrypt a URL to store it in, and append it to 
+the alumni's line in the CSV file.
+If things go well, then we will begin to implement a thank-you 
+video for those who donated. It will not be as personal, but 
+it will follow the same format of stitching clips together to 
+form one of our sentences. Finally, we will add a pop-up of a QR
+code in the stitched video that serves as an additional means
+for the viewer to access the donation page.
+\subsection{Scope of Subsequent Releases}
+We envision this project to be released and not updated until our
+customer wants to add something to it. At that point they can 
+update it themselves, or they can create a new senior project 
+team to handle it.
+\subsection{Limitations and Exclusions}
+The timeframe of our project limits us to only allowing videos 
+we ourselves take. In an ideal world, students and alumni would 
+be able to submit clips that they would have the creative liberty 
+to direct, act, and shoot, but with the variation that would be
+submitted our video editing program wouldn't be able to handle it,
+resulting in many videos getting rejected, and likely inappropriate
+videos getting accepted. The easiest way to address this is to
+tightly control what videos can be submitted by recording all of
+them ourselves.

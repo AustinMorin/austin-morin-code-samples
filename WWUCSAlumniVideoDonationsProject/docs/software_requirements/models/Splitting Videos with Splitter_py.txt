@@ -1,0 +1,15 @@
+title Splitting Videos with Splitter.py
+participant User
+participant Splitter.py
+participant Unedited Videos Dir
+participant Edited Clips Dir
+
+User->Splitter.py: Provides a list of unedited videos
+Splitter.py->Unedited Videos Dir: Requests videos
+Unedited Videos Dir-->Splitter.py: Gives videos
+Splitter.py->Splitter.py: Splits each video into clips of words and add subtitles
+Splitter.py->Edited Clips Dir: Requests amount of each word
+Edited Clips Dir-->Splitter.py: Returns amount of each word
+Splitter.py->Splitter.py: Names each clip <word><amount word + 1>.mp4
+Splitter.py-->Edited Clips Dir: Gives edited clips
+Splitter.py-->User: Informs user is it finished

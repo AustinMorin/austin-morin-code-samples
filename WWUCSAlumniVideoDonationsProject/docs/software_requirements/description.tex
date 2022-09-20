@@ -1,0 +1,106 @@
+\section{Overall Description}
+% Describe the product's context in the larger business or industry setting.  Do
+% not include specific features.  Give the reader an understand of how those
+% features fit into the larger setting. 
+%
+
+\subsection{Product Perspective}
+% How does the product fit in the business larger processes.  How is the user
+% intended to fit the software into their business activities?   Consider
+% including a figure that illustrates these relationships. 
+The Alumni Donation Video Stitcher is projected to increase donations to the 
+computer science department of Western Washington University. Currently, 
+donations are gathered by sending out emails to alumni with a link to the 
+donation site. Our project is going to personalize that process by adding a 
+link to a unique video for each alumnus. A week or so before donation emails 
+are to be sent out, our client will pass into our video stitching program a 
+CSV file with each alumnus's information, name and graduation year, and the 
+program will append to that file the links to URLs for each alumnus. The 
+stitching will take at most 5 days to process, at which point the office 
+who is responsible for sending out donation emails will gain access to the 
+CSV file and add the video URL to the email.
+
+\subsection{Product Features}
+% This is a list of high-level description of the functional behavior of the
+% product.  This should give the reader a better understanding of how the formal
+% requirements fit together. 
+There are two major components that we are designing: Splitting videos and 
+Stitching 
+videos.\\\\
+Splitting of videos: Will take a directory of unedited videos and will split 
+each one on the spaces between words. The split up snippets will be titled by what 
+word is being said within, and if the program understands it to be one of our 
+accepted words, it will be passed into our edited snippets directory to be accessed 
+by the video stitcher. If it is not deemed to be one of our accepted words, it 
+will be passed into a pending directory to be viewed and either accepted and 
+renamed, or is deleted due to unacceptable content.\\
+Stitching of videos: Will parse through the CSV file of graduate students' names 
+and graduation years, and for each student randomly select one of our prepared 
+sentences and find random snippets from our directory of snippets with precedence to 
+snippets taken in the same year as the student graduated. It will then stitch all 
+the snippets together to create a approximately 30-second long video, create a URL 
+to house it, and hash it. It will then stick that URL in the output file along 
+with the alumni's name and graduation year. The output file will then be stored 
+in a directory where the office has access. 
+
+\subsection{User Classes and Characteristics}
+% Describe the different rolls or classes of users.  For each user class,
+% describe the user class's principal characteristics.  For example, unix
+% systems have at least two classes of users: system administrators and
+% operators.  
+\begin{itemize}
+    \item Maintainers: are those in charge of maintaining and upgrading 
+    the code as need be.
+    \item Video collectors: are the people who collect recordings of 
+    students and faculty, who then pass it into the video splitter to 
+    turn sentences into snippets.
+    \item Video stitchers: the person who provides the input CSV file 
+    and prompts the program to stitch the videos together.
+    \item Video senders: the office who will take the output CSV file 
+    and access the video URLs to send to students.
+\end{itemize}
+
+\subsection{Operating Environment}
+% What is the expected environment?  For example, the product could be a desktop
+% application with users who work in a formal office environment.  Contrast this
+% with a mobile application for mountain biking that keeps track of GPS locations.
+This program is written in python 3.9 with the latest versions of moviepy, 1.0.3, 
+and pydub, 0.25.1. It is designed to be run on the university CS lab network to 
+deposit and collect videos from in one of our client's Jagodzinski's, directories 
+on the network. It is then to be retrieved by the office to email out links.
+
+\subsection{Design and Implementation Constraints}
+% List an constraints that are part of the project.  For example, health
+% services applications must implement HIPAA regulations.  
+\begin{enumerate}
+    \item We may only use snippets of people who have submitted a release 
+    form and had it accepted.
+    \item We or anyone assigned by the client is to record all videos and 
+    snippets to ensure quality and security.
+    \item To avoid mispronunciations, each student is to record their 
+    own name. Meaning, if two people share the same spelling for their 
+    names, the snippets will not be used interchangeably. If we do not have 
+    a recording of them themselves saying their name, we will instead 
+    insert a screen with their name plastered across it for a few seconds.
+    \item Since we cannot tie a video snippet of someone's name to a unique 
+    artifact like their W\# or their email, we have to rely on their name 
+    and graduation year to name the snippet, which may result in students 
+    with the same name and graduation year to receive the wrong video.
+    \item The user, the person requesting videos to be stitched, will 
+    need a machine that runs python 3+ as well as has the latest version 
+    of moviepy and pydub
+\end{enumerate}
+
+\subsection{Assumptions and Dependencies}
+% List assumptions and dependencies that are not formal constraints.  Items in
+% this list will, if changed, will cause a change in the formal requirements in
+% the next section.
+%
+\begin{enumerate}
+    \item The user, the person requesting videos to be stitched, is doing 
+    so on a machine that has access to the video snippets and the directory 
+    to where to deposit the output file.
+    \item The user is able to run the program.
+    \item The office has access to the directory containing the output file.
+    \item The alumni are able to open links and view a mp4 of 720 resolution.
+\end{enumerate}

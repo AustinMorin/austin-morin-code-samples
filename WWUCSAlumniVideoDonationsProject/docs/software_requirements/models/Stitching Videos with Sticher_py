@@ -1,0 +1,19 @@
+title Stitching Videos with Stitcher.py
+
+participant User
+participant Stitcher.py
+participant Edited Clips Dir
+participant Output Dir
+
+User->Stitcher.py: Provides a CSV file with alumni name and grad year
+Stitcher.py->Stitcher.py: Creates a copy of input file
+loop for each alumnus
+Stitcher.py->Stitcher.py: Picks a curated sentence
+Stitcher.py->Edited Clips Dir: Requests clips
+Edited Clips Dir-->Stitcher.py: Provides clips
+Stitcher.py->Stitcher.py: Stitches clips together
+Stitcher.py->Stitcher.py: Creates URL and hashes it
+Stitcher.py->Stitcher.py: Appends URL to copied file
+end
+Stitcher.py-->Output Dir: Saves output file to Output Dir
+Stitcher.py-->User: Informs of completion

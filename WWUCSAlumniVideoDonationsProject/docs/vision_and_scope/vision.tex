@@ -1,0 +1,45 @@
+\section{Vision of the Solution}
+% Now that we know what the customer needs,
+% what will the solution look like? 
+    
+\subsection{Vision Statement}
+% This is the formal vision statement.  
+%
+% For:         user class 
+The Western Washington University Computer Science Department
+% Who:         statement of need
+is looking for a new and engaging form of requesting donations for their programs and clubs from alumni.
+% The:         title of product
+We have come up with the Alumni Money Video Stitcher,
+% Is:          statement of solution
+which creates unique videos that stitch various clips of students and staff. The clips will combine to 
+greet the alumni by name and request a donation for various aspects of the department, such as 
+current projects and clubs that need funding.
+% Unlike:      closest alternative solution
+The current method for requesting donation is sending generic emails to alumni and asking for money. 
+% Our Product: differentiation statement 
+Our personalized messages would be more engaging. Seeing their peers, professors, new students, and school projects will hit them with nostalgia, 
+which will increase their chances of leaving a donation.
+  
+\subsection{Major Features}
+% Describe the major features that solve the customer's needs.
+Our customer is looking for a video made up of separate single word clips to short sentences taken by students and staff. 
+They are to be randomly strung together to form an approximately 30-second-long video requesting a donation to the program. 
+The video will comprise a greeting, the alumni's name, and a few clips highlighting aspects of the program that need funding. 
+It will end off with a request to donate. The video will be stored in an encrypted URL which is then sent to alumni via email.\\
+To use the program, the user will simply need to input a CSV file with the first name, last name, and graduation year of each alumnus. 
+The program will then stitch together unique videos tailored to each alumnus and spit out a new CSV file containing their 
+first name, last name, graduation year, and the encrypted URL to their personalized video.\\
+The clips included in each alumnus' video will be chosen at random, but with priority to clips from their graduation year. 
+The clip of their name will only be used if we have an instance of the alumnus saying their own name to avoid mispronunciations. 
+If we do not have a clip of their name, we will fill that space with a screen with their name typed out.\\
+To gather the video clips, we will set up recording sessions and invite students and staff to come in and record clips of 
+them saying a list of words and phrases. They will sign release forms and when the forms are processed we will add those clips to our database.
+
+\subsection{Assumptions and Dependencies}
+% What does this product depend on?  
+% The goal here is to describe, with as much detail as possible, what the envisioned solution needs to operate.  
+That students and staff will show up to film videos. If they don't, or we do not receive enough, it will be a 
+challenge to stitch together unique videos for each alumnus.
+We also require that  alumni will click on links sent to their email, because if we find that alumni will not click our URLs 
+then all of this is in vain. There isn't much we can do other than hope they trust our department to send out trustworthy links.

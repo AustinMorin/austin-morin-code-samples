@@ -1,0 +1,84 @@
+\section{Business Requirements}
+\subsection{Background}
+% What is the business context for the project?
+% What does the reader need to know about the customer's industry?
+
+The overarching goal of this project is to allow Computer Science alumni to have access to a URL link 
+in a post-graduation donation e-mail that lets them see a stitched montage video of various students, faculty, and
+club representatives asking for donations. Users are provided a link to the WWU Computer 
+Science Department's official donation page as well.
+
+The reader needs to know the process of accessing their @wwu.edu email account,
+coming to a session on a specified date, time, and location, signing a terms and conditions waiver, 
+preparing an elevator pitch for the recording, and following instructions given by the personnel recording
+the videos.
+
+\subsection{Business Opportunity}
+% What is the customer's need?
+% How does this need fit in the industrial context?
+
+The customer's need is to provide a simple means for students to recieve a donation request email upon graduating that
+contains a short message, a URL link to a stitched video created from a series of smaller videos of students, faculty, 
+and club representatives recorded on campus, a link to a donation page, and a QR within the video as an alternative means to
+access a donation page. The ability for students to be able to see the friends that 
+they made during their time in the CS department donate and to watch the professors and other faculty present short snippets 
+should excite them and encourage them to spread the news on donation opportunities to others.
+
+This need fits into the industrial context since this system will allow students to make donations on a secure site as opposed to
+making them via email or on the phone which is more subject to scams and fraud. Furthermore, this system will prevent the student 
+from doing more work on their end than they need to and will make the donation experience more engaging and convenient.
+
+
+\subsection{Business Objectives and Success Criteria}
+% Why does the customer need this product?
+% How will the customer know that the product is a success?
+%   You must be very specific here.  What experiment can we do to verify success?
+
+The customer needs the means to fund the technologies and resources that improve future Computer Science 
+students' experiences with assignments, clubs, mentoring sessions, social gatherings, career fairs, 
+scholarships, and all other activities associated with the Computer Science Department.
+
+Success can be measured by tracking how much money is donated per year, and compare that amount to how many people
+access the video URLs and the link to the offical CS donation page. If the amount of money donated increases from the
+previous year, success has been verified.
+
+\subsection{Customer and Market Needs}
+% Connect the objectives and success criteria back to the customer's business.
+% That is, why does the industry require the customer to have this solution? 
+
+The industry requires the customer to have this solution in order to expand the Computer Science 
+Department, provide ease of access to updated technologies and curriculum resources, fund scholarships, 
+fund department jobs, and remain relevant to ever-evolving major.
+
+\subsection{Business Risks}
+% This is a hazard assessment.  What could go wrong?  How bad would it be if it
+% did?  How likely is it?  What steps can we take to protect against the hazard?
+
+Upon initial assessment the project team has identified five hazards:
+1) URLs to the video links can be changed. The effects would be negligable since URLs can easily be recovered. 
+The chance of this happening is likely.
+URL encryption would be required to protect against the hazard.
+
+2) Alumni and faculty do not show up for video recording sessions. 
+The effects would be negligable as meetings can be rescheduled on another date. 
+The chance of this happening is likely. Steps taken to protect against the hazard can include advertising campaigns, 
+incentives such as raffles and gift cards, partnering with CS Clubs, and recruiting additional help with scheduling 
+and operating recording sessions.
+
+3) Incorrect info can be inserted into the database of names, e-mails, and URLs by the customer/admin. 
+The effects would be serious since it can delay e-mail communication with alumni for a long period of time depending on the damage. 
+The chance of this happening is seldom. Steps that can be taken to avoid this problem would be to ensure that all edge cases are covered 
+in the program code and make use of regular expressions to identify errors in database insertion.
+
+4) Video files can be corrupted due to a power outage, computer disconnect or shut-down, etc., destroying the URL.
+The effects would be serious because this can delay video stitching for a long period of time especially 
+if there are a lot of snippets to process. The chance of this happening is occasional. Steps that can be taken to 
+avoid this problem would be to use looping logic in the program code to restart the program upon a system crash, delete the video that 
+was in-progress, and start building the processed video again from scratch.
+
+5) CS Lab Computer file directory is entirely restructured. 
+The effects would be severe because entire files and directories can be lost. The chance
+of this happening is seldom. Steps that can be taken to avoid this problem would be to 
+use 3rd-party cloud storage such as iCloud, Google Cloud. Backups should not be stored on CS Lab Machine 
+and should occur once per quarter.
+

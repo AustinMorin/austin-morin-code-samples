@@ -1,0 +1,74 @@
+\section{Other Nonfunctional Requirements}
+% Nonfunctional requirements are shall-statements about how the software
+% performs or is written.  It is not a statement about what the software does.
+% For example, the function requirements for a Fibonacci function is this: the
+% function shall return the nth Fibonacci number when provided n as input.  A
+% nonfunctional requirement would be these: the function shall take time O(n)
+% and all lines of the software shall be reachable by some test-case.
+%
+
+\subsection{Performance Requirements}
+% Your project will have performance requirements.  How long is the user willing
+% to wait for the different features to execute?   For example, the software
+% shall authenticate authorized users withing 250ms.
+
+The process of stitching the videos together using Python's moviepy and pydub libraries
+shall stitch ~10,000 30-second videos in 3 days, where ~3,300 are stitched per day. If we
+choose later to implement threading in our program we shall stitch ~10,000 30-second videos in 1.5-2 days, 
+where ~4,500 are stitched per day. A single recording session shall take ~30 seconds per student, 
+and the transferring of each video file from the Zoomvid-6 camera via USB 3.0 connection to either the Computer 
+Science Lab computer or a developer's personal machine shall take a maximum of 1 hour. Sending out all donation 
+emails and video URL links to alumni shall be near instantaneous, give or take 5 minutes. Users shall be able 
+to access the videos and Computer Science Department Donation Page near instantaneously
+given that they have a suitable WiFi connection.
+
+\subsection{Safety Requirements}
+% It is unlikely that your project will have any safety requirements.  This
+% section would be used for software that controls a physical device that could
+% potentially cause harm.  
+
+The use of recording equipment with flashing lights will be avoided to protect epileptic users.
+
+\subsection{Security Requirements}
+% Do not overlook this section.  Consider the three primary topics of computer
+% security: Confidentiality, Integrity, and Availability. Your project will
+% have security requirements. 
+%
+
+1) Confidentiality: The development team, Computer Science club members, teacher assistants, and alumni does NOT have access to the
+contents of the input CSV files that contain alumni's first names, last names, years of graduation, nor the output CSV files
+that contains the first name, last name, graduation year, and the hashed URL to their personalized video.
+Dr. Filip Jagodzinski will have maintainer access to the CSV files, and the development team will be responsible for 
+creating a video stitching program that he may use to run the CSV files through. The development team has authorized access 
+to all video content and URL links.
+
+2) Integrity: The most important factor contributing towards the integrity of the project is the hashing of the URL video links.
+This is to prevent possible URL modification with harmful intent such as attackers re-directing alumni to non-trustworthy websites.
+The implementation of threading in the stitching program can result in race conditions where audio and video data is lost or overwritten.
+To avoid these situations, breaking critical sections up where threads are performed is recommended, and ordering threads to execute once
+their predecessor leaves its critical section. The development team is responsible for controlling all of the video content, 
+including the pop-up URLs and contact information in the videos, to maintain content consistency and integrity. 
+Obsolete and unused CSV and video files will be deleted from Jagodzinski's storage system taking up unnecessary storage space once per 
+two academic years. Instructions in two README files shall be written for the stitching program, one will be used to minimize CSV file 
+processing errors, and the other will be used to document how to collect the video clips. Regular expressions are used to detect errors 
+in CSV file input and output.
+
+3) Availability: The program code shall be engineered to restart upon a system crash, power outage, etc., delete a single that was in 
+the process of stitching, and start building the processed video again from scratch. CSV/video files in use during the academic year shall be 
+backed-up on a cloud storage system in case the Computer Science Lab Computer file directories are restructured.
+
+\subsection{Software Quality Attributes}
+% Quality requirements can be the most difficult to write.  The desired quality
+% must be written in a meaningful and testable way.  For example, All functions
+% within the software shall have a cyclomatic number less than 10.
+
+The final stitched videos will be ~30 seconds long. The pydub library should take at most 0.5 seconds to extract
+all audio spaces from a 30 video recording. Stitching together one video after adding transitions and editing the audio shall take
+~25 seconds without threading, and ~10-15 seconds with threading. Reading an input CSV file containing 30 rows shall take less than
+1 second, and reading an input CSV file containing thousands of rows shall take at most 30 seconds. For the output CSV files, it shall
+take at most 2 seconds to generate and hash 30 video URLs for an input CSV file with 30 rows, and take at most one second to write the
+hashed video URLs to a CSV file with 30 rows. Sending a single test email with one video URL link and one CS Donation Page link shall take
+less than one second on a satisfactory WiFi connection, and recieving a single test email shall take approximately 5-10 seconds on a satisfactory
+WiFi connection.
+
+

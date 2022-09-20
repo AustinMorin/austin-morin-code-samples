@@ -1,0 +1,37 @@
+# To run: pip3 install -r requirements.txt
+#
+# Windows users and some linux and some mac will need to download
+# imagemagick: https://www.imagemagick.org/script/download.php
+# for textClip's by moviepy
+
+#imageio==2.13.5
+#imageio-ffmpeg==0.4.5
+#openpyxl==3.0.9
+pycryptodome==3.14.1
+firebase_admin==5.2.0
+moviepy==1.0.3
+#numpy==1.22.0
+numpy==1.19.5 # best lab machine could find
+#pandas==1.4.2
+pandas==1.1.5
+pydub==0.25.1
+Pyrebase4==4.5.0
+Pillow==8.4.0 ### if we can get it to work. KEEP THOSE FINGERS CROSSED, BUCKOS!!!
+
+########################################################################
+
+#TO BE TESTED - EXCLUSIVELY USE THESE BELOW TO RUN pip install -r requirements.txt
+#INSTEAD OF pip3 install -r requirements.txt TO (HOPEFULLY) MAXIMUM COMPATIBLILITY ACROSS MACHINES
+
+#openpyxl==2.6.4
+#pycryptodome==3.14.1
+#firebase_admin==3.2.1
+#numpy==1.16.6
+#pandas==0.24.2
+#rsa==4.5
+#pydub==0.25.1
+#Pyrebase4==4.5.0
+#pycryptodome==3.14.1
+#moviepy==1.0.3
+
+########################################################################

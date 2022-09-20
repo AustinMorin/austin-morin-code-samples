@@ -1,0 +1,219 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[normalem]{ulem}
+\usepackage[left=3cm, right=3cm, top=2cm]{geometry}
+
+\title{Alumni Video Donations M9}
+\author{Simone Davison, Andrew Lanum, and Austin Morin }
+\date{May 18, 2022}
+
+\begin{document}
+
+\maketitle
+
+\section{General Progress Report}
+As of May 18, the project will be in its final stages of development as we prepare 
+for our end-of-the-year presentations this coming week. The program-breaking bugs 
+from the last milestone have been squashed, and we are preparing to input over 2,000 
+WWU donors through our Python program so that the final stitched videos can be sent 
+out to them before Give Day on May 26th. This will require the Alumni team to split 
+the input entry amongst themselves and closely monitor run-time performance and any 
+bugs that might happen during the weaving process. The majority of the work done 
+between this milestone and the last milestone was having our program reviewed 
+by Dr. Jagodzinski and updating video content, images, and clips where required. 
+The main intuition behind this was to ensure that there we unique clips for three 
+types of recipients: recent graduate alumni, older graduate alumni, and non-alumni. 
+Jagodzinski will also perform some basic CSS and formatting maintenance on the webpage 
+before having our team deploy the final version of it online. Some additional 
+last-minute video footage was recorded as well. The weaving program was updated 
+so that multiprocessing passes less data between processes to speed up performance 
+and saves work if the program happens to crash. It can also distinguish between different image types and handle those accordingly to avoid visual bugs during video weaving.\\~\\Some things that yet to be completed before the 
+end of the quarter is writing a user's guide that will instruct faculty and future students 
+working on the project on how to use the content found in both our GitLab and Google Firebase 
+repositories. Code and files will undergo one final look and be cleaned up, organized, and 
+commented thoroughly and feedback from post-Give Day activities will be assessed.
+
+\section{Team Accomplishments}
+\begin{itemize}
+    \item Formatted and split up xlsx files from client to be used in final project
+    \item Updated program to run more smoothly with multiprocessing and keep track of where it was if it exits in the middle of running
+    \item Reformatted and updated website layout to be more visually pleasing and user-friendly
+    \item Added and removed clips to make videos more coherent
+    \item Ran multiple large-scale tests to ensure program can run on a large scale
+    \item Began process of cleaning up code to make sure the program is readable for another group in the future
+\end{itemize}
+
+\section{Goals Met}
+\begin{itemize}
+    \item Video content and formatting is completed. Project is ready for final performance and operation checks.
+\end{itemize}
+
+\section{Goals Not Met}
+\begin{itemize}
+    \item All 2000+ donation videos not built and uploaded to Firebase.
+    \item All videos sent out to donors.
+    \item Have the website completely designed (able to put attention towards videos as links are not going out until May 25)
+    \item Finalize copyright and ownership rights to the project and create a final credits/acknowledgements list.
+    \item Finish user documentation.
+    \item Demo the program usage to our client.
+    \item Completely clean code, files, and file structures within Google Firebase and the Gitlab repo.
+\end{itemize}
+
+\section{Updated Expectations}
+See section Quarter Plan below for more details
+\begin{itemize}
+    \item Weeks 7-9:
+    \begin{itemize}
+        \item Finish designing videos
+        \item Make the videos
+        \item Give administration the XLSX file of donors and video links
+        \item Clean up/comment code
+        \item Documentation
+        \item Prepare and give the 493 presentation
+    \end{itemize}
+
+    \item Weeks 10-11:
+    \begin{itemize}
+        \item Incorporate feedback from give day
+        \item Clean up/comment code
+        \item Documentation
+    \end{itemize}
+\end{itemize}
+
+\section{Branch Description}
+    \begin{itemize}
+        \item master - All the most current project work is pushed to this branch (code, resources, documentation, etc.)
+        \item MS-2 - All project work pushed before Milestone 2’s date.
+        \item MS-3 - All project work pushed before Milestone 3’s date.
+        \item MS-4 - All project work pushed before Milestone 4’s date.
+        \item MS-5 - All project work pushed before Milestone 5’s date.
+        \item MS-6 - All project work pushed before Milestone 6’s date.
+        \item MS-7 - All project work pushed before Milestone 7’s date.
+        \item MS-8 - All project work pushed before Milestone 8’s date.
+        \item MS-9 - All project work pushed before Milestone 9’s date.
+    \end{itemize}
+    
+\section{Quarter Plan}
+\begin{itemize}
+    \item Week 1 (Mar 28 - Apr 1)
+    \begin{itemize}
+        \item Multiprocessing
+        \item Refine videos
+        \item Update CSV reference in program
+        \item \sout{Add access tokens} (unnecessary for our project)
+        \item Test on videos 2-30 (with upload turned off)
+    \end{itemize}
+    \item Week 2 (Apr 4 - Apr 8)
+    \begin{itemize}
+        \item MS6 (Have access token working, make headway on multiprocessing)
+        \item Multiprocessing
+        \item Refine videos
+        \item Begin hosting website on Firebase
+        \item Test on videos 2-30 (with upload turned off)
+    \end{itemize}
+    \item Week 3 (Apr 11 - Apr 15)
+    \begin{itemize}
+        \item Multiprocessing
+        \item Refine videos
+        \item Refine website hosted by Firebase
+        \item \sout{Test on videos ~1000 (with upload turned off)} (Moved to week 4)
+    \end{itemize}
+    \item Week 4 (Apr 18 - Apr 22)
+    \begin{itemize}
+        \item MS7 (Have multiprocessing working and video content well organized)
+        \item Refine videos
+        \item Refine website
+        \item Begin development on an installable executable
+        \item Test on videos ~1000 (with upload turned off)
+        \item Begin full scale testing (10,000 videos) (expected to take a while)
+    \end{itemize}
+    \item Week 5 (Apr 25 - Apr 29)
+    \begin{itemize}
+        \item Monitor video making process (fix bugs)
+        \item Let client try product
+        \item Inspect output videos
+        \item Improve program
+        \item Refine videos
+        \item Refine website
+        \item \sout{Begin development on an installable executable} (Moved to week 4)
+    \end{itemize}
+    \item Week 6 (May 2 - May 6)
+    \begin{itemize}
+        \item MS8 (Have begun refining documentation, \sout{have website hosted by Firebase} (already accomplished), have an installable executable)
+        \item Full scale test again (10,000 videos) (expected to take a while)
+        \item Refine videos
+        \item Refine website
+    \end{itemize}
+\item Week 7 (May 9 - May 13)
+    \begin{itemize}
+        \item Documentation
+        \item Refine videos
+        \item Refine website
+    \end{itemize}
+    \item Week 8 (May 16 - May 20)
+    \begin{itemize}
+        \item MS9 (Finish designing videos and begin production)
+        \item Documentation
+        \item Refine videos
+        \item Refine website
+        \item Make the videos this week and over the weekend
+        \item Monitor created videos
+    \end{itemize}
+    \item Week 9 (May 23 - May 27)
+    \begin{itemize}
+        \item Hand over the XLSX file containing donors and links to videos to CS administration
+        \item Documentation
+        \item Clean up/comment code
+        \item Refine website
+        \item Prepare for presentation
+        \item Videos sent out for give day (May 25-26)
+        \item Present! (May 27)
+    \end{itemize}
+    \item Week 10 (May 30 - Jun 3)
+    \begin{itemize}
+        \item Documentation
+        \item Clean up/comment code
+        \item Use feedback to from give day to improve product
+    \end{itemize}
+    \item Week 11 (Jun 6 - Jun 10)
+    \begin{itemize}
+        \item Documentation
+        \item Clean up/comment code
+    \end{itemize}
+\end{itemize}
+
+\section{Team Member Accomplishments}
+\begin{itemize}
+    \item  \bf{Simone Davison - (Hours Worked: 23)}
+    \begin{itemize}
+        \item Updated multiprocessing to pass less data between processes. Now it is stored in a file.
+        \item Learned to not bog down other lab machines by running the program in TMP.
+        \item Recorded more videos.
+        \item Program now saves work upon crash.
+        \item Cleaned up final excel file of recipients.
+    \end{itemize}
+    
+    \item  \bf{Andrew Lanum - (Hours Worked: ~8)}
+		\begin{itemize}
+			\item Added music to make videos more professional
+			\item Fixed resolution bug that caused black bars to appear sometimes
+			\item Ran a large scale test successfully
+			\item Updated text and made new QR code ad to better meet client specifications
+			\item Began deleting unused or otherwise useless code
+			\item Removed strange and/or unusable clips from firebase
+		\end{itemize}
+		
+    \item  \bf{Austin Morin - (Hours Worked: 15.5 hours)}
+    \begin{itemize}
+        \item Changed website wording and messages that dynamically change depending on the user's name.
+        \item Added play button overlay to video.
+        \item Debugged weave.py and ran a 50-video sample and tracked runtime.
+        \item Created some final bonus videos.
+        \item Started code cleaning.
+    \end{itemize}
+\end{itemize}
+
+\end{document}
+
+
+\end{document}

@@ -1,0 +1,79 @@
+\section{Features}
+% This section contains a list of requirement statements.  This should be of the
+% form "the system shall..."  and worded in a way that satisfaction of the
+% requirement can be verified.  For example, the software shall authenticate
+% users with at least two identification factors.  
+
+The system shall take long, pre-recorded videos of alumni saying specific words and phrases, and cut it into smaller snippets of video containing just the words and phrases.
+The system shall be able to combine snippets into longer videos, and have the longer videos be personalized for a specific alumni based on given paramaters (graduation year for example)
+The system shall store newly created videos in a secure location that can still be accessed online, and then hash the url of that location to be sent to an alumni.
+
+% [For Each Feature]
+\subsection{Name of feature}
+Video Splitting
+\subsubsection{Description}
+% Describe the feature and how it fits into the overall product.  
+The program takes a video of someone saying some words or phrases as input, then splits it into smaller videos where the silence between words/phrases is removed.
+
+\subsubsection{Priority}
+% Describe the relative importance of this feature. 
+This feature is important because it means videos can be recorded in bulk without the need to manually splice them up.
+
+\subsubsection{Stimulus and Response}
+% What event will trigger the feature and how should the system respond.  This
+% is probably an excerpt of a use case. 
+A user will run the splitting script on the specified file(s), and give an output name/location.
+
+\subsubsection{Functional Requirements}
+% Formally state the functional requirement.
+% The low-level format command shall require authorization by two
+% system-administrators before beginning the low-level format operation.
+The user inputs a video or series of videos, waits until the program is finished running, then recieves many smaller videos that partially make up the initial input.
+
+
+
+% [For Each Feature]
+\subsection{Name of feature}
+Video Stitching
+\subsubsection{Description}
+% Describe the feature and how it fits into the overall product.  
+The program takes a series of videos and stitches them together to make a personalized video message.
+
+\subsubsection{Priority}
+% Describe the relative importance of this feature. 
+This feature is essential because without it, there would be no videos to email to alumni.
+
+\subsubsection{Stimulus and Response}
+% What event will trigger the feature and how should the system respond.  This
+% is probably an excerpt of a use case. 
+A user will run the stitching script with the required paramaters (or a csv file containing all the required information).
+
+\subsubsection{Functional Requirements}
+% Formally state the functional requirement.
+% The low-level format command shall require authorization by two
+% system-administrators before beginning the low-level format operation.
+The user inputs the required paramaters or properly-formatted csv file, waits, then recieves their requested personalized video(s).
+
+
+
+% [For Each Feature]
+\subsection{Name of feature}
+URL Hashing
+\subsubsection{Description}
+% Describe the feature and how it fits into the overall product.  
+The program takes a URL of a specified video and hashes part of it, ensuring that the link still goes to the original video.
+
+\subsubsection{Priority}
+% Describe the relative importance of this feature. 
+This feature is somewhat important, because it wouldn't be good if alumni were able to easily access each others' videos.
+
+\subsubsection{Stimulus and Response}
+% What event will trigger the feature and how should the system respond.  This
+% is probably an excerpt of a use case. 
+Upon a stitched video being stored to its secure location, the program will then run the hashing script on that location's URL.
+
+\subsubsection{Functional Requirements}
+% Formally state the functional requirement.
+% The low-level format command shall require authorization by two
+% system-administrators before beginning the low-level format operation.
+The user runs the stitching script, and recieves the hashed URL of the stitched video.

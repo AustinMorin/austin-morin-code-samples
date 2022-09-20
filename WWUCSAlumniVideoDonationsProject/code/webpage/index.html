@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <style>
+      html, body {
+      width: 100%;
+      height: 100%;
+      font-family: 'PT Serif', sans-serif;
+      color: white;
+      text-align: center;
+      background-color: #007ac8;
+      }
+      
+      * {
+      box-sizing: border-box;
+      }
+      
+      .row {
+      object-fit: contain;
+      }
+      
+      .row:after {
+      content: "";
+      display: table;
+      clear: both;
+      }
+      
+      #container {
+      display: inline-block; /* shrink to fit */
+      width: 100%;           /* whatever width you like */
+      position: relative;    /* so .content can use position: absolute */
+      }
+      
+      #wrapper {
+      width: 640px;
+      height: 480px;
+      align: center;
+      }
+      
+      .playpause {
+      background-image: url(./vecteezy_green-play-button_1186943.ico);
+      background-repeat: no-repeat;
+      width: 20%;
+      height: 20%;
+      position: absolute;
+      left: 0%;
+      right: 0%;
+      top: 0%;
+      bottom: 0%;
+      margin: auto;
+      background-size: contain;
+      background-position: center;
+      top: -80px;
+      }
+      
+      .playpause {
+      opacity: 1;
+      transition: opacity 400ms;
+      }
+      
+      .playpause[hidden] {
+      opacity: 0;
+      display: block;
+      }
+    </style>
+	
+	<link rel="icon" href="https://www.wwu.edu/files/2020-07/Western%20Washington%20University%20Logo.png">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WWU CS Give Day 2022</title>
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/9.6.10/firebase-app-compat.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/9.6.10/firebase-auth-compat.js"></script>
+    <script defer src="/__/firebase/9.6.10/firebase-database-compat.js"></script>
+    <script defer src="/__/firebase/9.6.10/firebase-firestore-compat.js"></script>
+    <script defer src="/__/firebase/9.6.10/firebase-functions-compat.js"></script>
+    <script defer src="/__/firebase/9.6.10/firebase-messaging-compat.js"></script>
+    <script defer src="/__/firebase/9.6.10/firebase-storage-compat.js"></script>
+    <script defer src="/__/firebase/9.6.10/firebase-analytics-compat.js"></script>
+    <script defer src="/__/firebase/9.6.10/firebase-remote-config-compat.js"></script>
+    <script defer src="/__/firebase/9.6.10/firebase-performance-compat.js"></script>
+    <!-- 
+      initialize the SDK after all desired features are loaded, set useEmulator to false
+      to avoid connecting the SDK to running emulators.
+    -->
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+  </head>
+  
+  <body>
+    <div id="container">
+	<div class="row" style="background-color:#007ac8;font-size: 1.5em">
+	<link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
+	<div style="text-align: center; margin: auto; width: 100%;">
+	  <img src="./WWU_MakeWaves_Stacked_RGB.png" style="width: 40%; max-width: 250px"><br>
+	  Computer Science<br><br>
+	</div>
+      </div>
+      
+      <div>
+	<div class="wrapper">
+	  <video id="video" controls="" autoplay="" style="width: 80%; max-width: 800px; align:center; padding-top: 2px;" src="https://firebasestorage.googleapis.com/v0/b/wwucsgiving.appspot.com/o/default_404.mp4?alt=media&amp;token=811e2674-0e00-46f0-89de-11c4c2a2a183" type="video/mp4">
+	  </video>
+	  <!-- <div class="playpause"></div> -->
+	  <br><br>
+	  <!-- <script>
+	    function toggleVideo({ currentTarget: wrapper }) {
+	    let video = wrapper.querySelector('#video');
+	    let playpause = wrapper.querySelector('.playpause');
+	    if (video.paused) {
+	    video.play();
+	    playpause.setAttribute('hidden', '');
+	    } else {
+	    video.pause();
+	    playpause.removeAttribute('hidden');
+	    }
+	    }
+	    document.querySelectorAll('.wrapper').forEach(wrapper => wrapper.addEventListener('click', toggleVideo));
+	  </script> -->
+	</div>
+	
+	<div id="dear" style="text-align: left; font-size: 1.3em; width: 80%; max-width: 800px; margin: auto;">
+	  <link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
+	  <script>
+	    const url_string = window.location.toString()
+	    myFunc();
+	    function myFunc() {
+	    var name = url_string.substring(url_string.indexOf("?name=") + 6,url_string.indexOf("_"));
+	    name = decodeURI(name);
+	    document.getElementById("dear").append("Dear " + name + ",");
+	    }
+	  </script>
+	  <script src="./dist/bundle.js"></script>
+	  <text>
+	    <br><br>This year during Give Day, help CS at Western
+	    raise funds in support of student clubs, student research
+	    projects, and various department initiatives, including
+	    scholarships and outings to tech regional companies. Any
+	    gift amount is appreciated, and will make a
+	    difference. See student <a href="https://cs.wwu.edu/support-computer-science" style="background-color:#007ac8; font-size: 1.0em;
+	    font-family: &#39;Montserrat&#39;, sans-serif; padding: 0px;
+	    color: white; text-decoration: underline; font-weight:
+	    lighter">testimonials</a> for how past donations
+	    have made an impact.
+	  </text>
+	</div>
+      </div>
+      
+      <div class="button" align="center" style="padding: 20px;">
+	<a class="button" ,="" href="https://foundation.wwu.edu/GD22-ComputerScience">Donate Today!</a>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=PT+Serif&display=swap" rel="stylesheet">
+	<style>
+	  a:link, a:visited {
+	  background-color: #bad80a;
+	  color: #00150d;
+	  padding: 14px 25px;
+	  text-align: center;
+	  font-size: 18pt;
+	  text-decoration: none;
+	  display: inline-block;
+	  font-family: 'Montserrat', sans-serif;
+	  }
+	  
+	  a:hover, a:active {
+	  background-color: #00FF00;
+	  }
+	</style>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const loadEl = document.querySelector('#load');
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+        // // The Firebase SDK is initialized and available here!
+        //
+        // firebase.auth().onAuthStateChanged(user => { });
+        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+        // firebase.firestore().doc('/foo/bar').get().then(() => { });
+        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
+        // firebase.messaging().requestPermission().then(() => { });
+        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
+        // firebase.analytics(); // call to activate
+        // firebase.analytics().logEvent('tutorial_completed');
+        // firebase.performance(); // call to activate
+        //
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+
+        try {
+          let app = firebase.app();
+          let features = [
+            'auth', 
+            'database', 
+            'firestore',
+            'functions',
+            'messaging', 
+            'storage', 
+            'analytics', 
+            'remoteConfig',
+            'performance',
+          ].filter(feature => typeof app[feature] === 'function');
+        } catch (e) {
+          console.error(e);
+          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
+        }
+      });
+    </script>
+	<footer style="text-align: center; font-size: 1.0em; width: 80%;
+		   margin: auto; max-width: 800px">Credits: © 2022 Simone
+		   Davison, Andrew Lanum, and Austin Morin, as part of
+		   their year-long sr. capstone project. Back-end,
+		   front-end, full-stack, video app, and video
+		   acquisition -- they did it all. Music: &#x2117; 
+		   2020 YouTube Audio Library Corndogs in Santa Monica · The Great North Sound Society. 
+		   Music is royalty-free and non-copyright.</footer>
+
+  </body>
+</html>
